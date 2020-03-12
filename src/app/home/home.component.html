@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+  <a class="navbar-brand">
+    Event
+  </a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link active">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"> Add Event</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"> Admin Events</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">Login</a>
+    </li>
+  </ul>
+</nav>
+
+<div  class="container-fluid">
+  <div  class="row">
+    <div *ngFor = "let event of events" class="col-sm-4 mt-3">
+      <div   class="card cardFix">
+        <div  class="card-body">
+          <h5 class="card-title"> Event: {{event.title}} </h5>
+          <h6 class="card-subtitle mb-2 text-muted"> Date: {{event.date |date}} </h6>
+          <div>
+            <span class="card-subtitle mb-2"> Time: {{event.time}} </span>
+            <span> {{event.start}} </span>
+            <p class="card-text"> Price: {{event.price}} </p>
+            <p class="card-text"> Attendance Number: {{event.attendance}} </p>
+            <p class="card-text" > Address: {{event.address}} </p>
+            <p class="card-text" > Online URL: {{event.url}} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style= "margin-top: 20px;">
+<button type="button" class="btn btn-primary" (click) = "click()"> click</button>
+</div>
